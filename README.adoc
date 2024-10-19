@@ -1,0 +1,13 @@
+= Annotation Processor Diagnostics Demo
+
+Demo of a minimalistic Java Annotation Processor that prints a diagnostic (ERROR, WARNING, etc.) of the annotated element.
+
+To build it, just run `mvn`.
+The `defaultGoal` is `verify`.
+
+*This is supposed to fail* with a compile error, because in the `demo.Demo` class, there's a field annotated as `@Diagnostic(ERROR)`.
+
+When you build this project in IntelliJ (as of version 2024.2.3), it fails and jumps to the source of the error.
+You can also see all the diagnostics in the `Build Output` tool window and jump to the source by double clicking or pressing `Enter`.
+
+But even the `ERROR` does not show up in the source editor 😞
